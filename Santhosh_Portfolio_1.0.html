@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Santhosh Sowmy Kalpana — AI &amp; Analytics Program Manager</title>
+<meta name="description" content="Santhosh Sowmy Kalpana — AI &amp; Analytics Program Manager and Business Analyst. 3+ years leading enterprise AI programs at a Fortune 500 across finance, manufacturing, sourcing, and supply chain.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0C2427;
+    --ink-2:#0F2C30;
+    --panel:#123236;
+    --panel-2:#153A3F;
+    --line:#244C50;
+    --line-soft:#1C4045;
+    --bone:#ECE5D8;
+    --bone-dim:#9DB0AC;
+    --bone-faint:#6E8683;
+    --brass:#D2A24C;
+    --brass-bright:#E8C27E;
+    --serif:"Fraunces",Georgia,serif;
+    --sans:"IBM Plex Sans",system-ui,sans-serif;
+    --mono:"IBM Plex Mono",ui-monospace,monospace;
+    --maxw:1120px;
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+  body{
+    background:var(--ink);
+    color:var(--bone);
+    font-family:var(--sans);
+    font-weight:400;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+
+  a{color:inherit;text-decoration:none}
+  ::selection{background:var(--brass);color:var(--ink)}
+  :focus-visible{outline:2px solid var(--brass-bright);outline-offset:3px;border-radius:2px}
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px}
+  @media (max-width:640px){.wrap{padding:0 20px}}
+
+  .eyebrow{
+    font-family:var(--mono);
+    font-size:11.5px;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    color:var(--brass);
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+  }
+  .eyebrow::before{
+    content:"";
+    width:22px;height:1px;
+    background:var(--brass);
+    display:inline-block;
+    opacity:.7;
+  }
+
+  /* ---------- NAV ---------- */
+  header.nav{
+    position:sticky;top:0;z-index:50;
+    border-bottom:1px solid transparent;
+    transition:background .3s ease,border-color .3s ease,backdrop-filter .3s ease;
+  }
+  header.nav.scrolled{
+    background:rgba(12,36,39,.82);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line-soft);
+  }
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .brand{font-family:var(--mono);font-size:13px;letter-spacing:.04em;color:var(--bone);display:flex;align-items:center;gap:9px}
+  .brand b{color:var(--brass);font-weight:500}
+  .brand .dot{width:7px;height:7px;border-radius:50%;background:var(--brass);box-shadow:0 0 0 3px rgba(210,162,76,.18)}
+  .nav-links{display:flex;gap:30px;font-family:var(--mono);font-size:12.5px;letter-spacing:.05em;color:var(--bone-dim)}
+  .nav-links a{position:relative;padding:4px 0;transition:color .2s}
+  .nav-links a::after{content:"";position:absolute;left:0;bottom:-2px;width:0;height:1px;background:var(--brass);transition:width .25s ease}
+  .nav-links a:hover{color:var(--bone)}
+  .nav-links a:hover::after{width:100%}
+  @media (max-width:760px){.nav-links{display:none}}
+
+  /* ---------- HERO ---------- */
+  .hero{position:relative;padding:78px 0 66px;overflow:hidden}
+  .hero-grid{
+    position:absolute;inset:0;z-index:0;pointer-events:none;
+    background-image:
+      linear-gradient(var(--brass) 1px,transparent 1px),
+      linear-gradient(90deg,var(--brass) 1px,transparent 1px);
+    background-size:46px 46px;
+    opacity:.035;
+    mask-image:radial-gradient(120% 90% at 20% 8%,#000 0%,transparent 68%);
+    -webkit-mask-image:radial-gradient(120% 90% at 20% 8%,#000 0%,transparent 68%);
+  }
+  .hero-inner{position:relative;z-index:1}
+  .hero h1{
+    font-family:var(--serif);
+    font-weight:500;
+    font-size:clamp(38px,6.4vw,74px);
+    line-height:1.02;
+    letter-spacing:-.02em;
+    margin:26px 0 0;
+    max-width:16ch;
+  }
+  .hero h1 em{font-style:italic;color:var(--brass);font-weight:500}
+  .hero .lede{
+    margin-top:26px;
+    max-width:60ch;
+    font-size:clamp(16px,2vw,18.5px);
+    color:var(--bone-dim);
+    line-height:1.65;
+  }
+  .hero .lede b{color:var(--bone);font-weight:500}
+
+  .cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+  .btn{
+    font-family:var(--mono);font-size:12.5px;letter-spacing:.06em;
+    padding:13px 22px;border-radius:2px;display:inline-flex;align-items:center;gap:10px;
+    transition:transform .18s ease,background .2s ease,color .2s ease,border-color .2s ease;
+  }
+  .btn svg{width:15px;height:15px}
+  .btn-solid{background:var(--brass);color:var(--ink);font-weight:500}
+  .btn-solid:hover{background:var(--brass-bright);transform:translateY(-2px)}
+  .btn-ghost{border:1px solid var(--line);color:var(--bone)}
+  .btn-ghost:hover{border-color:var(--brass);color:var(--brass-bright);transform:translateY(-2px)}
+
+  .hero-meta{
+    margin-top:52px;display:flex;flex-wrap:wrap;gap:0;
+    border-top:1px solid var(--line-soft);
+  }
+  .hero-meta .cell{
+    flex:1 1 160px;padding:20px 26px 20px 0;min-width:150px;
+    border-right:1px solid var(--line-soft);
+  }
+  .hero-meta .cell:last-child{border-right:none}
+  .hero-meta .cell:not(:first-child){padding-left:26px}
+  .hero-meta .k{font-family:var(--serif);font-size:26px;color:var(--bone);letter-spacing:-.01em}
+  .hero-meta .l{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--bone-faint);margin-top:6px}
+  @media (max-width:640px){
+    .hero-meta .cell{flex:1 1 45%;border-right:none;border-bottom:1px solid var(--line-soft);padding:16px 0}
+    .hero-meta .cell:not(:first-child){padding-left:0}
+    .hero-meta .cell:nth-child(odd){padding-right:20px}
+  }
+
+  /* ---------- SECTION SHELL ---------- */
+  section{padding:78px 0;border-top:1px solid var(--line-soft)}
+  .sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:20px;margin-bottom:44px}
+  .sec-head h2{font-family:var(--serif);font-weight:500;font-size:clamp(26px,3.4vw,38px);letter-spacing:-.015em}
+  .sec-head .idx{font-family:var(--mono);font-size:12px;letter-spacing:.15em;color:var(--bone-faint)}
+
+  /* ---------- IMPACT ---------- */
+  .impact-grid{display:grid;grid-template-columns:1.15fr 1fr;gap:26px}
+  @media (max-width:840px){.impact-grid{grid-template-columns:1fr}}
+
+  .metric-cluster{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line-soft);border:1px solid var(--line-soft);border-radius:3px;overflow:hidden}
+  .metric{background:var(--ink-2);padding:26px 24px;position:relative}
+  .metric .val{font-family:var(--serif);font-size:clamp(34px,5vw,46px);font-weight:500;letter-spacing:-.02em;color:var(--brass);line-height:1}
+  .metric .val small{font-size:.5em;color:var(--brass);margin-left:2px}
+  .metric .lbl{font-family:var(--sans);font-size:13.5px;color:var(--bone-dim);margin-top:12px;line-height:1.5;max-width:24ch}
+  .metric .tag{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--bone-faint);position:absolute;top:20px;right:22px}
+  @media (max-width:440px){.metric-cluster{grid-template-columns:1fr}}
+
+  .gauge-card{background:var(--panel);border:1px solid var(--line);border-radius:3px;padding:30px 28px;display:flex;flex-direction:column;justify-content:space-between}
+  .gauge-card .g-eye{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--bone-faint)}
+  .gauge-wrap{display:flex;flex-direction:column;align-items:center;margin:8px 0 4px}
+  .gauge-svg{width:100%;max-width:260px;height:auto}
+  .gauge-read{font-family:var(--serif);font-size:52px;font-weight:500;color:var(--bone);line-height:1;margin-top:-6px}
+  .gauge-read small{font-size:.42em;color:var(--brass)}
+  .gauge-sub{font-family:var(--mono);font-size:11.5px;letter-spacing:.05em;color:var(--bone-dim);text-align:center;margin-top:8px}
+  .gauge-note{font-size:13.5px;color:var(--bone-dim);line-height:1.55;border-top:1px solid var(--line-soft);padding-top:18px;margin-top:18px}
+  .gauge-note b{color:var(--bone);font-weight:500}
+
+  /* ---------- EXPERIENCE ---------- */
+  .xp{display:grid;grid-template-columns:210px 1fr;gap:0}
+  @media (max-width:720px){.xp{grid-template-columns:1fr}}
+  .xp-item{display:contents}
+  .xp-row{border-top:1px solid var(--line-soft);padding:34px 0}
+  .xp-row:first-of-type{border-top:none;padding-top:0}
+  .xp-when{grid-column:1;padding-right:28px}
+  .xp-when .date{font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--brass)}
+  .xp-when .loc{font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:var(--bone-faint);margin-top:8px}
+  .xp-body{grid-column:2}
+  .xp-body h3{font-family:var(--serif);font-size:22px;font-weight:500;letter-spacing:-.01em}
+  .xp-body .co{font-family:var(--mono);font-size:12.5px;letter-spacing:.04em;color:var(--bone-dim);margin-top:6px}
+  .xp-body ul{list-style:none;margin-top:16px;display:flex;flex-direction:column;gap:10px}
+  .xp-body li{position:relative;padding-left:22px;color:var(--bone-dim);font-size:15px;line-height:1.6}
+  .xp-body li::before{content:"";position:absolute;left:0;top:10px;width:7px;height:7px;border:1px solid var(--brass);transform:rotate(45deg)}
+  .xp-body li b{color:var(--bone);font-weight:500}
+  @media (max-width:720px){
+    .xp-when{grid-column:1;padding:0 0 14px}
+    .xp-body{grid-column:1}
+    .xp-row{padding:30px 0}
+  }
+
+  /* ---------- PROJECTS ---------- */
+  .proj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  @media (max-width:840px){.proj-grid{grid-template-columns:1fr}}
+  .proj{
+    background:var(--panel);border:1px solid var(--line-soft);border-radius:3px;
+    padding:28px 26px;display:flex;flex-direction:column;
+    transition:transform .2s ease,border-color .2s ease,background .2s ease;
+  }
+  .proj:hover{transform:translateY(-4px);border-color:var(--brass);background:var(--panel-2)}
+  .proj .p-no{font-family:var(--mono);font-size:11px;letter-spacing:.16em;color:var(--brass)}
+  .proj .p-kind{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--bone-faint);margin-top:2px}
+  .proj h3{font-family:var(--serif);font-size:21px;font-weight:500;margin-top:18px;line-height:1.15;letter-spacing:-.01em}
+  .proj p{font-size:14px;color:var(--bone-dim);margin-top:14px;line-height:1.6;flex:1}
+  .proj .stack{display:flex;flex-wrap:wrap;gap:7px;margin-top:20px}
+  .proj .chip{font-family:var(--mono);font-size:10.5px;letter-spacing:.03em;color:var(--bone-dim);border:1px solid var(--line);padding:5px 9px;border-radius:2px}
+
+  /* ---------- TOOLKIT ---------- */
+  .tk{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  @media (max-width:760px){.tk{grid-template-columns:1fr}}
+  .tk-col h4{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--brass);margin-bottom:18px}
+  .tk-col .items{display:flex;flex-wrap:wrap;gap:8px}
+  .tk-col .items span{
+    font-family:var(--mono);font-size:12.5px;color:var(--bone);
+    border:1px solid var(--line-soft);border-radius:2px;padding:8px 12px;
+    transition:border-color .2s ease,color .2s ease;
+  }
+  .tk-col .items span:hover{border-color:var(--brass);color:var(--brass-bright)}
+
+  /* ---------- EDU + CERT ---------- */
+  .ec{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+  @media (max-width:760px){.ec{grid-template-columns:1fr}}
+  .ec-block h4{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--brass);margin-bottom:22px}
+  .ec-line{border-top:1px solid var(--line-soft);padding:20px 0}
+  .ec-line:first-of-type{border-top:none;padding-top:0}
+  .ec-line .t{font-family:var(--serif);font-size:19px;font-weight:500}
+  .ec-line .s{font-size:14px;color:var(--bone-dim);margin-top:6px}
+  .ec-line .d{font-family:var(--mono);font-size:11.5px;letter-spacing:.05em;color:var(--bone-faint);margin-top:8px}
+
+  /* ---------- CONTACT ---------- */
+  .contact{border-top:1px solid var(--line-soft);padding:90px 0 40px;text-align:center;position:relative}
+  .contact h2{font-family:var(--serif);font-weight:500;font-size:clamp(30px,5vw,54px);letter-spacing:-.02em;line-height:1.05}
+  .contact h2 em{font-style:italic;color:var(--brass)}
+  .contact p{color:var(--bone-dim);margin-top:20px;font-size:16.5px;max-width:52ch;margin-inline:auto}
+  .contact .cta-row{justify-content:center}
+  .foot{border-top:1px solid var(--line-soft);margin-top:70px;padding-top:26px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-family:var(--mono);font-size:11.5px;letter-spacing:.05em;color:var(--bone-faint)}
+  .foot a:hover{color:var(--brass)}
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){
+    .reveal{opacity:1;transform:none;transition:none}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <div class="brand"><span class="dot"></span> S.<b>KALPANA</b></div>
+    <nav class="nav-links">
+      <a href="#impact">Impact</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#toolkit">Toolkit</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" style="border-top:none">
+  <div class="hero-grid"></div>
+  <div class="wrap hero-inner">
+    <span class="eyebrow reveal">AI &amp; Analytics Program Manager · Chennai, India</span>
+    <h1 class="reveal">I turn enterprise challenges into <em>AI programs</em> that ship — and pay back.</h1>
+    <p class="lede reveal">Santhosh Sowmy Kalpana. Three-plus years leading <b>enterprise AI &amp; analytics programs</b> at a Fortune 500 across finance, manufacturing, sourcing, and supply chain — owning delivery end to end, from the first workshop to go-live and adoption.</p>
+    <div class="cta-row reveal">
+      <a class="btn btn-solid" href="mailto:santhosh.kalpana17@gmail.com">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+        Get in touch
+      </a>
+      <a class="btn btn-ghost" href="https://www.linkedin.com/in/santhosh-kalpana" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.08 1.4-2.08 2.85V21H9z"/></svg>
+        LinkedIn
+      </a>
+    </div>
+
+    <div class="hero-meta reveal">
+      <div class="cell"><div class="k">3+ yrs</div><div class="l">Global (USA)</div></div>
+      <div class="cell"><div class="k">Fortune&nbsp;500</div><div class="l">Lennox Int'l</div></div>
+      <div class="cell"><div class="k">30+</div><div class="l">AI dashboards</div></div>
+      <div class="cell"><div class="k">100+ hrs</div><div class="l">Saved / month</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- IMPACT -->
+<section id="impact">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Impact, in the numbers</h2>
+      <span class="idx">01 / IMPACT</span>
+    </div>
+    <div class="impact-grid">
+      <div class="metric-cluster reveal">
+        <div class="metric">
+          <span class="tag">Revenue</span>
+          <div class="val" data-value="6" data-format="money-m">$0<small>M</small></div>
+          <div class="lbl">Incremental revenue unlocked by fixing OTIF bottlenecks on a $45M dealer program.</div>
+        </div>
+        <div class="metric">
+          <span class="tag">Cost avoided</span>
+          <div class="val" data-value="1.2" data-format="money-m">$0<small>M</small></div>
+          <div class="lbl">Avoided yearly in out-of-network shipping via a real-time tracking dashboard.</div>
+        </div>
+        <div class="metric">
+          <span class="tag">Optimization</span>
+          <div class="val" data-value="239" data-format="money-k">$0<small>K</small></div>
+          <div class="lbl">Saved through carrier what-if analysis and recommended operating constraints.</div>
+        </div>
+        <div class="metric">
+          <span class="tag">Accuracy</span>
+          <div class="val" data-value="94" data-format="percent">0<small>%</small></div>
+          <div class="lbl">Predictive accuracy on accrual cost estimation for non-invoiced shipments.</div>
+        </div>
+      </div>
+
+      <div class="gauge-card reveal">
+        <div class="g-eye">OTIF — Gold Service program</div>
+        <div class="gauge-wrap">
+          <svg class="gauge-svg" viewBox="0 0 220 132" role="img" aria-label="OTIF improved from 78 percent to 93 percent">
+            <path d="M18 120 A92 92 0 0 1 202 120" fill="none" stroke="#1C4045" stroke-width="14" stroke-linecap="round"/>
+            <path id="gaugeFill" d="M18 120 A92 92 0 0 1 202 120" fill="none" stroke="#D2A24C" stroke-width="14" stroke-linecap="round"/>
+            <g id="gaugeStart" opacity="0">
+              <line x1="110" y1="120" x2="110" y2="120" stroke="#9DB0AC" stroke-width="2"/>
+            </g>
+          </svg>
+          <div class="gauge-read"><span id="gaugeVal">78</span><small>%</small></div>
+          <div class="gauge-sub">from 78% &nbsp;→&nbsp; 93% on-time in-full</div>
+        </div>
+        <div class="gauge-note">Orchestrated a cross-functional analytics team to diagnose delivery bottlenecks — <b>a 15-point OTIF lift that unlocked $6M</b>.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Experience</h2>
+      <span class="idx">02 / EXPERIENCE</span>
+    </div>
+    <div class="xp">
+      <div class="xp-item reveal">
+        <div class="xp-when xp-row">
+          <div class="date">Mar 2025 — Present</div>
+          <div class="loc">Richardson, TX · USA</div>
+        </div>
+        <div class="xp-body xp-row">
+          <h3>Senior Business Analyst — AI &amp; Analytics Programs</h3>
+          <div class="co">Lennox International</div>
+          <ul>
+            <li>Led enterprise-wide AI &amp; analytics programs across finance, manufacturing, sourcing, and supply chain, owning delivery from <b>PRDs and user stories through UAT to go-live</b>.</li>
+            <li>Shipped a Databricks AI ecosystem with <b>Genie-powered dashboards and autonomous research agents</b> embedded into workflows, replacing manual reporting for VP/Director stakeholders.</li>
+            <li>Spearheaded <b>30+ AI-powered dashboards</b>, automating reporting and saving <b>100+ hours per month</b> while enabling real-time decisions.</li>
+            <li>Migrated analytics from Qlik and Power BI to the Databricks COE Catalog, partnering with SAP teams on CDS views and connectors into the data lake.</li>
+            <li>Cut cross-functional gaps <b>40%</b> with a RACI framework; lifted product adoption <b>22%</b> and UX metrics <b>30%</b> through demos and field training.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="xp-item reveal">
+        <div class="xp-when xp-row">
+          <div class="date">Sep 2023 — Feb 2025</div>
+          <div class="loc">Richardson, TX · USA</div>
+        </div>
+        <div class="xp-body xp-row">
+          <h3>Business Analyst</h3>
+          <div class="co">Lennox International</div>
+          <ul>
+            <li>Led the Gold Service program for a <b>$45M dealer</b> — diagnosed OTIF bottlenecks, lifting OTIF 78% → 93% and unlocking <b>$6M</b> in incremental revenue.</li>
+            <li>Cost-avoided <b>$1.2M/year</b> in out-of-network shipping with a real-time tracking dashboard; saved <b>$239K</b> via carrier what-if optimization.</li>
+            <li>Built a predictive model estimating accrual costs at <b>94% accuracy</b> to support leadership decisions.</li>
+            <li>Powered network design (digital twin) and scenario modeling, translating results into network-change recommendations for SCL and Finance leaders.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="xp-item reveal">
+        <div class="xp-when xp-row">
+          <div class="date">Jun 2023 — Aug 2023</div>
+          <div class="loc">Richardson, TX · USA</div>
+        </div>
+        <div class="xp-body xp-row">
+          <h3>Supply Chain Intern</h3>
+          <div class="co">Lennox International</div>
+          <ul>
+            <li>Ran cost-benefit analysis for a reusable-pallet transition and sourced competitive supplier quotes.</li>
+            <li>Projected <b>$1.4M ROI</b> and presented a data-driven proof of concept to leadership.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="xp-item reveal">
+        <div class="xp-when xp-row">
+          <div class="date">May 2019 — Jul 2019</div>
+          <div class="loc">Moscow · Russia</div>
+        </div>
+        <div class="xp-body xp-row">
+          <h3>Engineering Intern</h3>
+          <div class="co">DMG Mori Pvt Ltd &amp; MAI</div>
+          <ul>
+            <li>Optimized G-code for cut orientation, reducing raw-material usage <b>17%</b> and cycle time <b>23%</b>.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Selected projects</h2>
+      <span class="idx">03 / PROJECTS</span>
+    </div>
+    <div class="proj-grid">
+      <div class="proj reveal">
+        <div class="p-no">P.01</div>
+        <div class="p-kind">Generative AI</div>
+        <h3>Vision-LLM invoice extraction</h3>
+        <p>An automation that reads invoices from PDFs and images with a locally hosted Qwen2.5-VL model via Ollama, lands structured data in a database, and feeds Celonis dashboards tracking actuals vs. planned.</p>
+        <div class="stack">
+          <span class="chip">Qwen2.5-VL</span><span class="chip">Ollama</span><span class="chip">Celonis</span><span class="chip">Python</span>
+        </div>
+      </div>
+      <div class="proj reveal">
+        <div class="p-no">P.02</div>
+        <div class="p-kind">Machine Learning</div>
+        <h3>Freight cost prediction</h3>
+        <p>A model predicting accrual freight cost for non-invoiced shipments from shipment-level data — feature engineering, Random Forest and XGBoost regression, and RMSE-based selection of XGBoost for lower error.</p>
+        <div class="stack">
+          <span class="chip">XGBoost</span><span class="chip">Random Forest</span><span class="chip">scikit-learn</span><span class="chip">RMSE</span>
+        </div>
+      </div>
+      <div class="proj reveal">
+        <div class="p-no">P.03</div>
+        <div class="p-kind">ML Ops</div>
+        <h3>Model deployment on Databricks</h3>
+        <p>Operationalized the freight model in Databricks — reusable artifacts and route-level feature mappings in volumes for scalable inference, plus an interactive app that generates predictions from user inputs.</p>
+        <div class="stack">
+          <span class="chip">Databricks</span><span class="chip">Model artifacts</span><span class="chip">Inference app</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOOLKIT -->
+<section id="toolkit">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Toolkit</h2>
+      <span class="idx">04 / TOOLKIT</span>
+    </div>
+    <div class="tk">
+      <div class="tk-col reveal">
+        <h4>AI &amp; Analytics</h4>
+        <div class="items">
+          <span>Data Storytelling</span><span>Dashboarding</span><span>Generative AI</span><span>Machine Learning</span><span>Predictive Modeling</span>
+        </div>
+      </div>
+      <div class="tk-col reveal">
+        <h4>BI &amp; Data</h4>
+        <div class="items">
+          <span>Databricks</span><span>Power BI</span><span>Qlik</span><span>SQL</span><span>Python</span><span>Alteryx</span><span>Excel</span><span>Essbase</span>
+        </div>
+      </div>
+      <div class="tk-col reveal">
+        <h4>PM &amp; Domain</h4>
+        <div class="items">
+          <span>Azure DevOps</span><span>Agile</span><span>Project44</span><span>Optilogic Cosmic Frog</span><span>IBM LogicNet</span><span>AMPL</span><span>SAP BW</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION + CERTS -->
+<section id="education">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Education &amp; certifications</h2>
+      <span class="idx">05 / CREDENTIALS</span>
+    </div>
+    <div class="ec">
+      <div class="ec-block reveal">
+        <h4>Education</h4>
+        <div class="ec-line">
+          <div class="t">M.S. Industrial Engineering</div>
+          <div class="s">Data Science &amp; Operations Research — Texas A&amp;M University, College Station, TX</div>
+          <div class="d">Aug 2021 — Aug 2023</div>
+        </div>
+        <div class="ec-line">
+          <div class="t">B.E. Aerospace Engineering</div>
+          <div class="s">Moscow Aviation Institute, Moscow, Russia</div>
+          <div class="d">Aug 2017 — May 2021</div>
+        </div>
+      </div>
+      <div class="ec-block reveal">
+        <h4>Certifications</h4>
+        <div class="ec-line">
+          <div class="t">MITx SCM MicroMasters</div>
+          <div class="s">MIT Center for Transportation &amp; Logistics</div>
+          <div class="d">Ongoing — Feb 2026</div>
+        </div>
+        <div class="ec-line">
+          <div class="t">Lean Six Sigma — Green Belt</div>
+          <div class="s">Six Sigma Academy, Amsterdam</div>
+          <div class="d">May 2023</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact" style="border-top:none">
+  <div class="wrap">
+    <span class="eyebrow reveal" style="justify-content:center;display:flex">Open to opportunities · Chennai, India</span>
+    <h2 class="reveal" style="margin-top:22px">Let's build the <em>next program</em> together.</h2>
+    <p class="reveal">Looking for an AI &amp; Analytics Program Manager who can translate business problems into shipped, adopted, high-ROI solutions. That's the work I do.</p>
+    <div class="cta-row reveal">
+      <a class="btn btn-solid" href="mailto:santhosh.kalpana17@gmail.com">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+        santhosh.kalpana17@gmail.com
+      </a>
+      <a class="btn btn-ghost" href="tel:+919150697815">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+        +91 91506 97815
+      </a>
+    </div>
+
+    <div class="foot">
+      <span>© 2026 Santhosh Sowmy Kalpana</span>
+      <span><a href="https://www.linkedin.com/in/santhosh-kalpana" target="_blank" rel="noopener">linkedin.com/in/santhosh-kalpana</a></span>
+    </div>
+  </div>
+</section>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+
+  // sticky nav style
+  var nav = document.getElementById('nav');
+  var onScroll = function(){ nav.classList.toggle('scrolled', window.scrollY > 12); };
+  onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
+
+  // reveal on scroll
+  var revs = document.querySelectorAll('.reveal');
+  if(reduce){ revs.forEach(function(e){e.classList.add('in');}); }
+  else {
+    var ro = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){ en.target.classList.add('in'); ro.unobserve(en.target); }
+      });
+    }, {threshold:.14, rootMargin:'0px 0px -40px 0px'});
+    revs.forEach(function(e){ ro.observe(e); });
+  }
+
+  // number count-up
+  function fmt(v, f){
+    if(f==='money-m'){ var s=(v%1===0)?v.toFixed(0):v.toFixed(1); return '$'+s+'<small>M</small>'; }
+    if(f==='money-k'){ return '$'+Math.round(v)+'<small>K</small>'; }
+    if(f==='percent'){ return Math.round(v)+'<small>%</small>'; }
+    return Math.round(v);
+  }
+  function animateVal(el){
+    var target = parseFloat(el.getAttribute('data-value'));
+    var f = el.getAttribute('data-format');
+    if(reduce){ el.innerHTML = fmt(target,f); return; }
+    var dur=1300, t0=null;
+    function step(ts){
+      if(!t0) t0=ts;
+      var p=Math.min((ts-t0)/dur,1);
+      var e=1-Math.pow(1-p,3);
+      el.innerHTML = fmt(target*e, f);
+      if(p<1) requestAnimationFrame(step);
+      else el.innerHTML = fmt(target,f);
+    }
+    requestAnimationFrame(step);
+  }
+  var vals = document.querySelectorAll('.metric .val');
+  var vo = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting){ animateVal(en.target); vo.unobserve(en.target); }
+    });
+  }, {threshold:.5});
+  vals.forEach(function(v){ vo.observe(v); });
+
+  // OTIF gauge
+  var fill = document.getElementById('gaugeFill');
+  var readEl = document.getElementById('gaugeVal');
+  if(fill){
+    var len = fill.getTotalLength();
+    fill.style.strokeDasharray = len;
+    var startPct = 78/100, endPct = 93/100;
+    fill.style.strokeDashoffset = len*(1-startPct);
+    if(readEl) readEl.textContent = '78';
+    var go = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(!en.isIntersecting) return;
+        go.unobserve(en.target);
+        if(reduce){ fill.style.strokeDashoffset = len*(1-endPct); if(readEl) readEl.textContent='93'; return; }
+        var dur=1500, t0=null;
+        function step(ts){
+          if(!t0) t0=ts;
+          var p=Math.min((ts-t0)/dur,1);
+          var e=1-Math.pow(1-p,3);
+          var cur = startPct + (endPct-startPct)*e;
+          fill.style.strokeDashoffset = len*(1-cur);
+          if(readEl) readEl.textContent = Math.round(cur*100);
+          if(p<1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+      });
+    }, {threshold:.5});
+    go.observe(document.querySelector('.gauge-card'));
+  }
+})();
+</script>
+</body>
+</html>
