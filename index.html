@@ -7,7 +7,7 @@
 <meta name="description" content="Santhosh Sowmy Kalpana — AI &amp; Analytics Program Manager and Business Analyst. 3+ years leading enterprise AI programs at a Fortune 500 across finance, manufacturing, sourcing, and supply chain.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
     --ink:#0C2427;
@@ -89,38 +89,36 @@
   @media (max-width:760px){.nav-links{display:none}}
 
   /* ---------- HERO ---------- */
-  .hero{position:relative;padding:78px 0 66px;overflow:hidden}
+  .hero{position:relative;padding:48px 0 62px;overflow:hidden}
   .hero-grid{
     position:absolute;inset:0;z-index:0;pointer-events:none;
     background-image:
       linear-gradient(var(--brass) 1px,transparent 1px),
       linear-gradient(90deg,var(--brass) 1px,transparent 1px);
     background-size:46px 46px;
-    opacity:.035;
-    mask-image:radial-gradient(120% 90% at 20% 8%,#000 0%,transparent 68%);
-    -webkit-mask-image:radial-gradient(120% 90% at 20% 8%,#000 0%,transparent 68%);
+    opacity:.03;
+    mask-image:radial-gradient(120% 90% at 82% 12%,#000 0%,transparent 64%);
+    -webkit-mask-image:radial-gradient(120% 90% at 82% 12%,#000 0%,transparent 64%);
   }
-  .hero-inner{position:relative;z-index:1}
-  .hero h1{
-    font-family:var(--serif);
-    font-weight:500;
-    font-size:clamp(38px,6.4vw,74px);
-    line-height:1.02;
-    letter-spacing:-.02em;
-    margin:26px 0 0;
-    max-width:16ch;
+  .hero-inner{position:relative;z-index:1;width:100%;
+    display:grid;grid-template-columns:minmax(250px,350px) 1fr;gap:54px;align-items:center}
+  .hero-card{width:100%}
+  .hero-card img{width:100%;height:auto;display:block;filter:drop-shadow(0 22px 48px rgba(0,0,0,.45))}
+  .hero-content{min-width:0}
+  .hero-title{
+    font-family:var(--sans);font-weight:700;text-transform:uppercase;
+    font-size:clamp(32px,5vw,64px);line-height:.98;letter-spacing:-.02em;margin:18px 0 0;
   }
-  .hero h1 em{font-style:italic;color:var(--brass);font-weight:500}
+  .hero-title .solid{color:var(--bone);display:block}
+  .hero-title .out{display:block;color:transparent;-webkit-text-stroke:1.4px var(--brass)}
   .hero .lede{
-    margin-top:26px;
-    max-width:60ch;
-    font-size:clamp(16px,2vw,18.5px);
-    color:var(--bone-dim);
-    line-height:1.65;
+    margin:24px 0 0;max-width:52ch;
+    font-size:clamp(15.5px,1.7vw,17.5px);color:var(--bone-dim);line-height:1.65;
   }
   .hero .lede b{color:var(--bone);font-weight:500}
+  .hero .eyebrow{justify-content:flex-start}
 
-  .cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+  .cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
   .btn{
     font-family:var(--mono);font-size:12.5px;letter-spacing:.06em;
     padding:13px 22px;border-radius:2px;display:inline-flex;align-items:center;gap:10px;
@@ -132,22 +130,19 @@
   .btn-ghost{border:1px solid var(--line);color:var(--bone)}
   .btn-ghost:hover{border-color:var(--brass);color:var(--brass-bright);transform:translateY(-2px)}
 
-  .hero-meta{
-    margin-top:52px;display:flex;flex-wrap:wrap;gap:0;
-    border-top:1px solid var(--line-soft);
+  .hero-stats{display:flex;flex-wrap:wrap;margin-top:38px;border-top:1px solid var(--line-soft)}
+  .hero-stats .cell{padding:20px 26px 0 0;border-right:1px solid var(--line-soft)}
+  .hero-stats .cell:not(:first-child){padding-left:26px}
+  .hero-stats .cell:last-child{border-right:none}
+  .hero-stats .k{font-family:var(--sans);font-weight:700;font-size:clamp(28px,3.2vw,38px);color:var(--brass);letter-spacing:-.02em;line-height:1}
+  .hero-stats .l{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--bone-faint);margin-top:8px;max-width:15ch}
+  @media (max-width:860px){
+    .hero-inner{grid-template-columns:1fr;gap:34px;justify-items:start}
+    .hero-card{max-width:290px}
   }
-  .hero-meta .cell{
-    flex:1 1 160px;padding:20px 26px 20px 0;min-width:150px;
-    border-right:1px solid var(--line-soft);
-  }
-  .hero-meta .cell:last-child{border-right:none}
-  .hero-meta .cell:not(:first-child){padding-left:26px}
-  .hero-meta .k{font-family:var(--serif);font-size:26px;color:var(--bone);letter-spacing:-.01em}
-  .hero-meta .l{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--bone-faint);margin-top:6px}
-  @media (max-width:640px){
-    .hero-meta .cell{flex:1 1 45%;border-right:none;border-bottom:1px solid var(--line-soft);padding:16px 0}
-    .hero-meta .cell:not(:first-child){padding-left:0}
-    .hero-meta .cell:nth-child(odd){padding-right:20px}
+  @media (max-width:520px){
+    .hero-stats .cell{padding:16px 16px 0 0}
+    .hero-stats .cell:not(:first-child){padding-left:16px}
   }
 
   /* ---------- SECTION SHELL ---------- */
@@ -166,6 +161,7 @@
   .metric .val small{font-size:.5em;color:var(--brass);margin-left:2px}
   .metric .lbl{font-family:var(--sans);font-size:13.5px;color:var(--bone-dim);margin-top:12px;line-height:1.5;max-width:24ch}
   .metric .tag{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--bone-faint);position:absolute;top:20px;right:22px}
+  .metric.wide{grid-column:1 / -1}
   @media (max-width:440px){.metric-cluster{grid-template-columns:1fr}}
 
   .gauge-card{background:var(--panel);border:1px solid var(--line);border-radius:3px;padding:30px 28px;display:flex;flex-direction:column;justify-content:space-between}
@@ -182,22 +178,22 @@
   .xp{display:grid;grid-template-columns:210px 1fr;gap:0}
   @media (max-width:720px){.xp{grid-template-columns:1fr}}
   .xp-item{display:contents}
-  .xp-row{border-top:1px solid var(--line-soft);padding:34px 0}
+  .xp-row{border-top:1px solid var(--line-soft);padding:18px 0}
   .xp-row:first-of-type{border-top:none;padding-top:0}
   .xp-when{grid-column:1;padding-right:28px}
   .xp-when .date{font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--brass)}
   .xp-when .loc{font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:var(--bone-faint);margin-top:8px}
   .xp-body{grid-column:2}
-  .xp-body h3{font-family:var(--serif);font-size:22px;font-weight:500;letter-spacing:-.01em}
-  .xp-body .co{font-family:var(--mono);font-size:12.5px;letter-spacing:.04em;color:var(--bone-dim);margin-top:6px}
+  .xp-body h3{font-family:var(--serif);font-size:19px;font-weight:500;letter-spacing:-.01em}
+  .xp-body .co{font-family:var(--mono);font-size:12px;letter-spacing:.04em;color:var(--bone-dim);margin-top:5px}
   .xp-body ul{list-style:none;margin-top:16px;display:flex;flex-direction:column;gap:10px}
   .xp-body li{position:relative;padding-left:22px;color:var(--bone-dim);font-size:15px;line-height:1.6}
   .xp-body li::before{content:"";position:absolute;left:0;top:10px;width:7px;height:7px;border:1px solid var(--brass);transform:rotate(45deg)}
   .xp-body li b{color:var(--bone);font-weight:500}
   @media (max-width:720px){
-    .xp-when{grid-column:1;padding:0 0 14px}
+    .xp-when{grid-column:1;padding:0 0 8px}
     .xp-body{grid-column:1}
-    .xp-row{padding:30px 0}
+    .xp-row{padding:18px 0}
   }
 
   /* ---------- PROJECTS ---------- */
@@ -237,14 +233,23 @@
   .ec-line .t{font-family:var(--serif);font-size:19px;font-weight:500}
   .ec-line .s{font-size:14px;color:var(--bone-dim);margin-top:6px}
   .ec-line .d{font-family:var(--mono);font-size:11.5px;letter-spacing:.05em;color:var(--bone-faint);margin-top:8px}
+  .edu-grid{display:grid;grid-template-columns:0.82fr 1fr;gap:44px;align-items:center}
+  @media (max-width:760px){.edu-grid{grid-template-columns:1fr;gap:28px}}
+  .edu-photo{margin:0;position:relative}
+  .edu-photo img{width:100%;height:auto;display:block;border-radius:3px;border:1px solid var(--line)}
+  .edu-photo figcaption{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--bone-faint);margin-top:14px}
+  .edu-photo.no-img{min-height:280px;border:1px dashed var(--line);border-radius:3px;background:var(--panel);display:flex;align-items:center;justify-content:center;text-align:center}
+  .edu-photo.no-img figcaption{display:none}
+  .edu-photo.no-img::before{content:"Add graduation.jpg to your repo";font-family:var(--mono);font-size:12px;letter-spacing:.04em;color:var(--bone-faint);padding:24px;line-height:1.6}
 
   /* ---------- CONTACT ---------- */
-  .contact{border-top:1px solid var(--line-soft);padding:90px 0 40px;text-align:center;position:relative}
-  .contact h2{font-family:var(--serif);font-weight:500;font-size:clamp(30px,5vw,54px);letter-spacing:-.02em;line-height:1.05}
+  .contact{text-align:center;position:relative;padding:0}
+  .contact-main{display:flex;flex-direction:column;align-items:center;width:100%;padding:64px 0 56px}
+  .contact h2{font-family:var(--serif);font-weight:500;font-size:clamp(34px,6vw,64px);letter-spacing:-.02em;line-height:1.04;max-width:16ch}
   .contact h2 em{font-style:italic;color:var(--brass)}
-  .contact p{color:var(--bone-dim);margin-top:20px;font-size:16.5px;max-width:52ch;margin-inline:auto}
+  .contact p{color:var(--bone-dim);margin-top:22px;font-size:16.5px;max-width:52ch;margin-inline:auto}
   .contact .cta-row{justify-content:center}
-  .foot{border-top:1px solid var(--line-soft);margin-top:70px;padding-top:26px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-family:var(--mono);font-size:11.5px;letter-spacing:.05em;color:var(--bone-faint)}
+  .foot{border-top:1px solid var(--line-soft);padding:26px 0;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-family:var(--mono);font-size:11.5px;letter-spacing:.05em;color:var(--bone-faint)}
   .foot a:hover{color:var(--brass)}
 
   /* reveal */
@@ -263,8 +268,9 @@
     <nav class="nav-links">
       <a href="#impact">Impact</a>
       <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
-      <a href="#toolkit">Toolkit</a>
+      <a href="#education">Education</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
@@ -274,29 +280,35 @@
 <section class="hero" style="border-top:none">
   <div class="hero-grid"></div>
   <div class="wrap hero-inner">
-    <span class="eyebrow reveal">AI &amp; Analytics Program Manager · Chennai, India</span>
-    <h1 class="reveal">I turn enterprise challenges into <em>AI programs</em> that ship — and pay back.</h1>
-    <p class="lede reveal">Santhosh Sowmy Kalpana. Three-plus years leading <b>enterprise AI &amp; analytics programs</b> at a Fortune 500 across finance, manufacturing, sourcing, and supply chain — owning delivery end to end, from the first workshop to go-live and adoption.</p>
-    <div class="cta-row reveal">
-      <a class="btn btn-solid" href="mailto:santhosh.kalpana17@gmail.com">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
-        Get in touch
-      </a>
-      <a class="btn btn-ghost" href="https://www.linkedin.com/in/santhosh-kalpana" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.08 1.4-2.08 2.85V21H9z"/></svg>
-        LinkedIn
-      </a>
-      <a class="btn btn-ghost" href="Santhosh-Kalpana-Resume.pdf" target="_blank" rel="noopener" download>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg>
-        Download résumé
-      </a>
+    <div class="hero-card reveal">
+      <img src="profile-card.png" alt="Santhosh Sowmy Kalpana">
     </div>
-
-    <div class="hero-meta reveal">
-      <div class="cell"><div class="k">3+ yrs</div><div class="l">Global (USA)</div></div>
-      <div class="cell"><div class="k">Fortune&nbsp;500</div><div class="l">Lennox Int'l</div></div>
-      <div class="cell"><div class="k">30+</div><div class="l">AI dashboards</div></div>
-      <div class="cell"><div class="k">100+ hrs</div><div class="l">Saved / month</div></div>
+    <div class="hero-content">
+      <span class="eyebrow reveal">Chennai, India · Open to new roles</span>
+      <h1 class="hero-title reveal">
+        <span class="solid">AI &amp; Analytics</span>
+        <span class="out">Program Manager</span>
+      </h1>
+      <p class="lede reveal">Three-plus years leading <b>enterprise AI &amp; analytics programs</b> at a Fortune 500 across finance, manufacturing, sourcing, and supply chain — owning delivery end to end, from the first workshop to go-live and adoption.</p>
+      <div class="cta-row reveal">
+        <a class="btn btn-solid" href="mailto:santhosh.kalpana17@gmail.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          Get in touch
+        </a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/santhosh-kalpana" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.08 1.4-2.08 2.85V21H9z"/></svg>
+          LinkedIn
+        </a>
+        <a class="btn btn-ghost" href="Santhosh-Kalpana-Resume.pdf" target="_blank" rel="noopener" download>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg>
+          Download résumé
+        </a>
+      </div>
+      <div class="hero-stats reveal">
+        <div class="cell"><div class="k">3+</div><div class="l">Years Experience</div></div>
+        <div class="cell"><div class="k">30+</div><div class="l">AI Solutions Shipped</div></div>
+        <div class="cell"><div class="k">4</div><div class="l">Business Domains</div></div>
+      </div>
     </div>
   </div>
 </section>
@@ -305,30 +317,30 @@
 <section id="impact">
   <div class="wrap">
     <div class="sec-head reveal">
-      <h2>Impact, in the numbers</h2>
+      <h2>Impact</h2>
       <span class="idx">01 / IMPACT</span>
     </div>
     <div class="impact-grid">
       <div class="metric-cluster reveal">
         <div class="metric">
+          <span class="tag">Delivery</span>
+          <div class="val" data-value="100" data-format="plus">0<small>+</small></div>
+          <div class="lbl">Man-hours saved monthly</div>
+        </div>
+        <div class="metric">
+          <span class="tag">Scale</span>
+          <div class="val" data-value="30" data-format="plus">0<small>+</small></div>
+          <div class="lbl">Databricks dashboards &amp; AI agents</div>
+        </div>
+        <div class="metric">
           <span class="tag">Revenue</span>
           <div class="val" data-value="6" data-format="money-m">$0<small>M</small></div>
-          <div class="lbl">Incremental revenue unlocked by fixing OTIF bottlenecks on a $45M dealer program.</div>
+          <div class="lbl">Incremental revenue unlocked</div>
         </div>
         <div class="metric">
           <span class="tag">Cost avoided</span>
           <div class="val" data-value="1.2" data-format="money-m">$0<small>M</small></div>
-          <div class="lbl">Avoided yearly in out-of-network shipping via a real-time tracking dashboard.</div>
-        </div>
-        <div class="metric">
-          <span class="tag">Optimization</span>
-          <div class="val" data-value="239" data-format="money-k">$0<small>K</small></div>
-          <div class="lbl">Saved through carrier what-if analysis and recommended operating constraints.</div>
-        </div>
-        <div class="metric">
-          <span class="tag">Accuracy</span>
-          <div class="val" data-value="94" data-format="percent">0<small>%</small></div>
-          <div class="lbl">Predictive accuracy on accrual cost estimation for non-invoiced shipments.</div>
+          <div class="lbl">Shipping cost avoided yearly</div>
         </div>
       </div>
 
@@ -338,14 +350,11 @@
           <svg class="gauge-svg" viewBox="0 0 220 132" role="img" aria-label="OTIF improved from 78 percent to 93 percent">
             <path d="M18 120 A92 92 0 0 1 202 120" fill="none" stroke="#1C4045" stroke-width="14" stroke-linecap="round"/>
             <path id="gaugeFill" d="M18 120 A92 92 0 0 1 202 120" fill="none" stroke="#D2A24C" stroke-width="14" stroke-linecap="round"/>
-            <g id="gaugeStart" opacity="0">
-              <line x1="110" y1="120" x2="110" y2="120" stroke="#9DB0AC" stroke-width="2"/>
-            </g>
           </svg>
           <div class="gauge-read"><span id="gaugeVal">78</span><small>%</small></div>
-          <div class="gauge-sub">from 78% &nbsp;→&nbsp; 93% on-time in-full</div>
+          <div class="gauge-sub">78% → 93% on-time in-full</div>
         </div>
-        <div class="gauge-note">Orchestrated a cross-functional analytics team to diagnose delivery bottlenecks — <b>a 15-point OTIF lift that unlocked $6M</b>.</div>
+        <div class="gauge-note">A <b>15-point OTIF lift</b> that unlocked $6M.</div>
       </div>
     </div>
   </div>
@@ -367,13 +376,6 @@
         <div class="xp-body xp-row">
           <h3>Senior Business Analyst — AI &amp; Analytics Programs</h3>
           <div class="co">Lennox International</div>
-          <ul>
-            <li>Led enterprise-wide AI &amp; analytics programs across finance, manufacturing, sourcing, and supply chain, owning delivery from <b>PRDs and user stories through UAT to go-live</b>.</li>
-            <li>Shipped a Databricks AI ecosystem with <b>Genie-powered dashboards and autonomous research agents</b> embedded into workflows, replacing manual reporting for VP/Director stakeholders.</li>
-            <li>Spearheaded <b>30+ AI-powered dashboards</b>, automating reporting and saving <b>100+ hours per month</b> while enabling real-time decisions.</li>
-            <li>Migrated analytics from Qlik and Power BI to the Databricks COE Catalog, partnering with SAP teams on CDS views and connectors into the data lake.</li>
-            <li>Cut cross-functional gaps <b>40%</b> with a RACI framework; lifted product adoption <b>22%</b> and UX metrics <b>30%</b> through demos and field training.</li>
-          </ul>
         </div>
       </div>
 
@@ -385,12 +387,6 @@
         <div class="xp-body xp-row">
           <h3>Business Analyst</h3>
           <div class="co">Lennox International</div>
-          <ul>
-            <li>Led the Gold Service program for a <b>$45M dealer</b> — diagnosed OTIF bottlenecks, lifting OTIF 78% → 93% and unlocking <b>$6M</b> in incremental revenue.</li>
-            <li>Cost-avoided <b>$1.2M/year</b> in out-of-network shipping with a real-time tracking dashboard; saved <b>$239K</b> via carrier what-if optimization.</li>
-            <li>Built a predictive model estimating accrual costs at <b>94% accuracy</b> to support leadership decisions.</li>
-            <li>Powered network design (digital twin) and scenario modeling, translating results into network-change recommendations for SCL and Finance leaders.</li>
-          </ul>
         </div>
       </div>
 
@@ -402,10 +398,6 @@
         <div class="xp-body xp-row">
           <h3>Supply Chain Intern</h3>
           <div class="co">Lennox International</div>
-          <ul>
-            <li>Ran cost-benefit analysis for a reusable-pallet transition and sourced competitive supplier quotes.</li>
-            <li>Projected <b>$1.4M ROI</b> and presented a data-driven proof of concept to leadership.</li>
-          </ul>
         </div>
       </div>
 
@@ -417,9 +409,36 @@
         <div class="xp-body xp-row">
           <h3>Engineering Intern</h3>
           <div class="co">DMG Mori Pvt Ltd &amp; MAI</div>
-          <ul>
-            <li>Optimized G-code for cut orientation, reducing raw-material usage <b>17%</b> and cycle time <b>23%</b>.</li>
-          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Skills</h2>
+      <span class="idx">03 / SKILLS</span>
+    </div>
+    <div class="tk">
+      <div class="tk-col reveal">
+        <h4>AI &amp; Analytics</h4>
+        <div class="items">
+          <span>Data Storytelling</span><span>Dashboarding</span><span>Generative AI</span><span>Machine Learning</span><span>Predictive Modeling</span>
+        </div>
+      </div>
+      <div class="tk-col reveal">
+        <h4>BI &amp; Data</h4>
+        <div class="items">
+          <span>Databricks</span><span>Power BI</span><span>Qlik</span><span>SQL</span><span>Python</span><span>Alteryx</span><span>Excel</span><span>Essbase</span>
+        </div>
+      </div>
+      <div class="tk-col reveal">
+        <h4>PM &amp; Domain</h4>
+        <div class="items">
+          <span>Azure DevOps</span><span>Agile</span><span>Project44</span><span>Optilogic Cosmic Frog</span><span>IBM LogicNet</span><span>AMPL</span><span>SAP BW</span>
         </div>
       </div>
     </div>
@@ -431,7 +450,7 @@
   <div class="wrap">
     <div class="sec-head reveal">
       <h2>Selected projects</h2>
-      <span class="idx">03 / PROJECTS</span>
+      <span class="idx">04 / PROJECTS</span>
     </div>
     <div class="proj-grid">
       <div class="proj reveal">
@@ -465,46 +484,20 @@
   </div>
 </section>
 
-<!-- TOOLKIT -->
-<section id="toolkit">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <h2>Toolkit</h2>
-      <span class="idx">04 / TOOLKIT</span>
-    </div>
-    <div class="tk">
-      <div class="tk-col reveal">
-        <h4>AI &amp; Analytics</h4>
-        <div class="items">
-          <span>Data Storytelling</span><span>Dashboarding</span><span>Generative AI</span><span>Machine Learning</span><span>Predictive Modeling</span>
-        </div>
-      </div>
-      <div class="tk-col reveal">
-        <h4>BI &amp; Data</h4>
-        <div class="items">
-          <span>Databricks</span><span>Power BI</span><span>Qlik</span><span>SQL</span><span>Python</span><span>Alteryx</span><span>Excel</span><span>Essbase</span>
-        </div>
-      </div>
-      <div class="tk-col reveal">
-        <h4>PM &amp; Domain</h4>
-        <div class="items">
-          <span>Azure DevOps</span><span>Agile</span><span>Project44</span><span>Optilogic Cosmic Frog</span><span>IBM LogicNet</span><span>AMPL</span><span>SAP BW</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- EDUCATION + CERTS -->
+<!-- EDUCATION -->
 <section id="education">
   <div class="wrap">
     <div class="sec-head reveal">
-      <h2>Education &amp; certifications</h2>
-      <span class="idx">05 / CREDENTIALS</span>
+      <h2>Education</h2>
+      <span class="idx">05 / EDUCATION</span>
     </div>
-    <div class="ec">
-      <div class="ec-block reveal">
-        <h4>Education</h4>
+    <div class="edu-grid">
+      <figure class="edu-photo reveal">
+        <img src="graduation.jpg" alt="Santhosh Sowmy Kalpana at graduation"
+             onerror="this.style.display='none';this.parentNode.classList.add('no-img');">
+        <figcaption>Texas A&amp;M University · Class of 2023</figcaption>
+      </figure>
+      <div class="edu-list reveal">
         <div class="ec-line">
           <div class="t">M.S. Industrial Engineering</div>
           <div class="s">Data Science &amp; Operations Research — Texas A&amp;M University, College Station, TX</div>
@@ -516,26 +509,13 @@
           <div class="d">Aug 2017 — May 2021</div>
         </div>
       </div>
-      <div class="ec-block reveal">
-        <h4>Certifications</h4>
-        <div class="ec-line">
-          <div class="t">MITx SCM MicroMasters</div>
-          <div class="s">MIT Center for Transportation &amp; Logistics</div>
-          <div class="d">Ongoing — Feb 2026</div>
-        </div>
-        <div class="ec-line">
-          <div class="t">Lean Six Sigma — Green Belt</div>
-          <div class="s">Six Sigma Academy, Amsterdam</div>
-          <div class="d">May 2023</div>
-        </div>
-      </div>
     </div>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section class="contact" id="contact" style="border-top:none">
-  <div class="wrap">
+<section class="contact" id="contact" style="border-top:1px solid var(--line-soft)">
+  <div class="wrap contact-main">
     <span class="eyebrow reveal" style="justify-content:center;display:flex">Open to opportunities · Chennai, India</span>
     <h2 class="reveal" style="margin-top:22px">Let's build the <em>next program</em> together.</h2>
     <p class="reveal">Looking for an AI &amp; Analytics Program Manager who can translate business problems into shipped, adopted, high-ROI solutions. That's the work I do.</p>
@@ -553,11 +533,11 @@
         Download résumé
       </a>
     </div>
+  </div>
 
-    <div class="foot">
-      <span>© 2026 Santhosh Sowmy Kalpana</span>
-      <span><a href="https://www.linkedin.com/in/santhosh-kalpana" target="_blank" rel="noopener">linkedin.com/in/santhosh-kalpana</a></span>
-    </div>
+  <div class="wrap foot">
+    <span>© 2026 Santhosh Sowmy Kalpana</span>
+    <span><a href="https://www.linkedin.com/in/santhosh-kalpana" target="_blank" rel="noopener">linkedin.com/in/santhosh-kalpana</a></span>
   </div>
 </section>
 
@@ -587,6 +567,7 @@
     if(f==='money-m'){ var s=(v%1===0)?v.toFixed(0):v.toFixed(1); return '$'+s+'<small>M</small>'; }
     if(f==='money-k'){ return '$'+Math.round(v)+'<small>K</small>'; }
     if(f==='percent'){ return Math.round(v)+'<small>%</small>'; }
+    if(f==='plus'){ return Math.round(v)+'<small>+</small>'; }
     return Math.round(v);
   }
   function animateVal(el){
